@@ -1,1 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Muthu Shivaraman | System Engineer</title>
+
+    <meta name="description"
+          content="Muthu Shivaraman - System Engineer, IT Support, Endpoint and Infrastructure Support professional with 3+ years of enterprise IT experience.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0b1120;
+            color: #e5e7eb;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(11, 17, 32, 0.95);
+            border-bottom: 1px solid #1f2937;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-container {
+            min-height: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .logo span {
+            color: #38bdf8;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #cbd5e1;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #38bdf8;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 88vh;
+            display: flex;
+            align-items: center;
+            padding: 80px 0;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 6vw, 72px);
+            line-height: 1.05;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #38bdf8;
+        }
+
+        .hero h2 {
+            font-size: 24px;
+            font-weight: 500;
+            color: #cbd5e1;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            color: #94a3b8;
+            max-width: 700px;
+            font-size: 17px;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 12px 22px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            border: 1px solid #334155;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #38bdf8;
+            color: #07111f;
+            border-color: #38bdf8;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary:hover {
+            border-color: #38bdf8;
+            color: #38bdf8;
+        }
+
+        .profile-wrapper {
+            display: flex;
+            justify-content: center;
+        }
+
+        .profile {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #38bdf8;
+            box-shadow: 0 0 50px rgba(56, 189, 248, 0.20);
+        }
+
+        /* SECTIONS */
+
+        section {
+            padding: 90px 0;
+        }
+
+        .section-title {
+            font-size: 34px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+
+        .section-title span {
+            color: #38bdf8;
+        }
+
+        .section-line {
+            width: 60px;
+            height: 4px;
+            background: #38bdf8;
+            margin-bottom: 35px;
+            border-radius: 5px;
+        }
+
+        .section-text {
+            color: #94a3b8;
+            max-width: 900px;
+        }
+
+        /* CARDS */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: #111827;
+            border: 1px solid #1f2937;
+            padding: 25px;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #38bdf8;
+        }
+
+        .card h3 {
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #94a3b8;
+            font-size: 14px;
+        }
+
+        /* SKILLS */
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill {
+            background: #111827;
+            border: 1px solid #334155;
+            padding: 9px 14px;
+            border-radius: 7px;
+            color: #cbd5e1;
+            font-size: 13px;
+        }
+
+        .skill:hover {
+            border-color: #38bdf8;
+            color: #38bdf8;
+        }
+
+        /* EXPERIENCE */
+
+        .experience {
+            background: #111827;
+            border-left: 4px solid #38bdf8;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .experience h3 {
+            color: #ffffff;
+            font-size: 24px;
+        }
+
+        .experience .company {
+            color: #38bdf8;
+            font-weight: 600;
+        }
+
+        .experience .date {
+            color: #64748b;
+            margin: 8px 0 20px;
+        }
+
+        .experience ul {
+            padding-left: 20px;
+        }
+
+        .experience li {
+            margin-bottom: 10px;
+            color: #cbd5e1;
+        }
+
+        /* PROJECTS */
+
+        .project-card {
+            min-height: 210px;
+        }
+
+        .project-card h3 {
+            color: #38bdf8;
+        }
+
+        /* EDUCATION */
+
+        .education-item {
+            background: #111827;
+            border: 1px solid #1f2937;
+            padding: 22px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+        }
+
+        .education-item h3 {
+            color: #ffffff;
+        }
+
+        .education-item p {
+            color: #94a3b8;
+        }
+
+        /* CONTACT */
+
+        .contact-box {
+            background: #111827;
+            border: 1px solid #1f2937;
+            padding: 35px;
+            border-radius: 12px;
+        }
+
+        .contact-box p {
+            margin-bottom: 10px;
+            color: #cbd5e1;
+        }
+
+        .contact-box strong {
+            color: #ffffff;
+        }
+
+        /* FOOTER */
+
+        footer {
+            border-top: 1px solid #1f2937;
+            padding: 30px 0;
+            text-align: center;
+            color: #64748b;
+            font-size: 13px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 850px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero {
+                padding-top: 60px;
+            }
+
+            .hero p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .buttons {
+                justify-content: center;
+            }
+
+            .profile-wrapper {
+                order: -1;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 65px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+    <div class="container nav-container">
+
+        <div class="logo">
+            MUTHU<span>.</span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </div>
+</nav>
+
+
+<!-- HERO -->
+
+<header class="hero">
+
+    <div class="container hero-content">
+
+        <div>
+
+            <h1>
+                Muthu <span>Shivaraman</span>
+            </h1>
+
+            <h2>
+                System Engineer | IT Support | Endpoint & Infrastructure Support
+            </h2>
+
+            <p>
+                System Engineer with 3+ years of enterprise IT support experience,
+                specializing in Windows, Active Directory, endpoint management,
+                OS deployment, patch management, networking, Microsoft 365,
+                security and infrastructure troubleshooting.
+            </p>
+
+            <div class="buttons">
+
+                <a class="btn btn-primary" href="#experience">
+                    View Experience
+                </a>
+
+                <a class="btn btn-secondary" href="#contact">
+                    Contact Me
+                </a>
+
+                <a class="btn btn-secondary"
+                   href="https://www.linkedin.com/"
+                   target="_blank">
+                    LinkedIn
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="profile-wrapper">
+
+            <img
+                class="profile"
+                src="profile.jpg"
+                alt="Muthu Shivaraman">
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Professional <span>Summary</span>
+        </h2>
+
+        <div class="section-line"></div>
+
+        <p class="section-text">
+
+            System Engineer / L2 Desktop Support professional with 3+ years
+            of hands-on experience in enterprise end-user support, Windows
+            administration, endpoint management, OS deployment, patch
+            management, Active Directory and infrastructure troubleshooting.
+
+            Experienced in Windows 10/11 environments, software deployment,
+            OS imaging and reimaging, hardware and application troubleshooting,
+            user and computer management, Group Policy, Microsoft 365,
+            endpoint security, networking and remote support.
+
+            Hands-on exposure to enterprise technologies including HCL BigFix,
+            ManageEngine Endpoint Central, FOG, CloneDeploy, Trend Micro,
+            Microsoft Entra ID, Okta, Citrix, VPN, Jira, Nagios, Wireshark
+            and HAR log analysis.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- TECHNICAL SKILLS -->
+
+<section id="skills">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Technical <span>Skills</span>
+        </h2>
+
+        <div class="section-line"></div>
+
+        <div class="skills">
+
+            <div class="skill">Windows 10</div>
+            <div class="skill">Windows 11</div>
+            <div class="skill">Linux</div>
+            <div class="skill">macOS</div>
+
+            <div class="skill">Active Directory</div>
+            <div class="skill">Group Policy</div>
+            <div class="skill">Microsoft Entra ID</div>
+            <div class="skill">Okta</div>
+
+            <div class="skill">Microsoft 365</div>
+            <div class="skill">Office 365</div>
+            <div class="skill">Citrix</div>
+
+            <div class="skill">HCL BigFix</div>
+            <div class="skill">ManageEngine Endpoint Central</div>
+            <div class="skill">FOG Server</div>
+            <div class="skill">CloneDeploy</div>
+
+            <div class="skill">OS Imaging & Reimaging</div>
+            <div class="skill">Patch Management</div>
+            <div class="skill">Software Deployment</div>
+            <div class="skill">Endpoint Management</div>
+
+            <div class="skill">TCP/IP</div>
+            <div class="skill">DNS</div>
+            <div class="skill">DHCP</div>
+            <div class="skill">VPN</div>
+            <div class="skill">VLAN</div>
+            <div class="skill">LAN/Wi-Fi</div>
+
+            <div class="skill">Trend Micro</div>
+            <div class="skill">Endpoint Security</div>
+
+            <div class="skill">PowerShell</div>
+            <div class="skill">Bash</div>
+            <div class="skill">Windows CLI</div>
+
+            <div class="skill">Wireshark</div>
+            <div class="skill">HAR Logs</div>
+            <div class="skill">Nagios</div>
+            <div class="skill">Jira</div>
+
+            <div class="skill">Intune</div>
+            <div class="skill">SCCM / MECM</div>
+            <div class="skill">Windows Autopilot</div>
+            <div class="skill">Endpoint Analytics</div>
+            <div class="skill">Defender for Endpoint</div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- EXPERIENCE -->
+
+<section id="experience">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Work <span>Experience</span>
+        </h2>
+
+        <div class="section-line"></div>
+
+        <div class="experience">
+
+            <h3>System Engineer – L2 / Desktop Support</h3>
+
+            <div class="company">
+                247.ai | Bangalore
+            </div>
+
+            <div class="date">
+                April 19, 2023 – May 01, 2026
+            </div>
+
+            <ul>
+
+                <li>
+                    Provided L2 enterprise IT support for Windows endpoints,
+                    applications, hardware, software and end-user technical issues.
+                </li>
+
+                <li>
+                    Supported Windows 10/11 environments including troubleshooting,
+                    configuration, system performance and endpoint issues.
+                </li>
+
+                <li>
+                    Performed OS imaging, reimaging and device provisioning using
+                    FOG Server and CloneDeploy.
+                </li>
+
+                <li>
+                    Supported patch management and software deployment using
+                    HCL BigFix and ManageEngine Endpoint Central.
+                </li>
+
+                <li>
+                    Managed Active Directory user and computer objects,
+                    OU movement, Group Policy changes and domain join/disjoin activities.
+                </li>
+
+                <li>
+                    Supported Microsoft 365, Office 365, Outlook, Teams and
+                    Citrix-related end-user issues.
+                </li>
+
+                <li>
+                    Worked with Microsoft Entra ID and Okta for identity,
+                    authentication and user access support.
+                </li>
+
+                <li>
+                    Troubleshot VPN, DNS, DHCP, IP configuration, LAN,
+                    Wi-Fi and other endpoint connectivity issues.
+                </li>
+
+                <li>
+                    Supported endpoint security operations including Trend Micro
+                    Antivirus and security-related troubleshooting.
+                </li>
+
+                <li>
+                    Used Jira for incident and service request management,
+                    documentation, escalation and SLA-driven support.
+                </li>
+
+                <li>
+                    Performed troubleshooting using PowerShell, Windows command-line
+                    utilities, Event Logs, system diagnostics, Wireshark and HAR logs.
+                </li>
+
+                <li>
+                    Coordinated with Network, Server, Security and other technical
+                    teams for complex incidents and infrastructure-related issues.
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Key Projects & <span>Technical Initiatives</span>
+        </h2>
+
+        <div class="section-line"></div>
+
+        <div class="cards">
+
+            <div class="card project-card">
+
+                <h3>Enterprise OS Deployment & Imaging</h3>
+
+                <p>
+                    Supported enterprise Windows imaging and reimaging activities
+                    using FOG Server and CloneDeploy, including OS provisioning,
+                    application deployment, driver support and endpoint readiness.
+                </p>
+
+            </div>
+
+
+            <div class="card project-card">
+
+                <h3>Endpoint Patch & Software Management</h3>
+
+                <p>
+                    Supported enterprise patching and software deployment activities
+                    using HCL BigFix and ManageEngine Endpoint Central across
+                    managed Windows endpoints.
+                </p>
+
+            </div>
+
+
+            <div class="card project-card">
+
+                <h3>VPN & Secure Connectivity Migration</h3>
+
+                <p>
+                    Supported endpoint-side VPN migration and troubleshooting
+                    activities involving Cisco VPN, Palo Alto GlobalProtect,
+                    connectivity issues and user access.
+                </p>
+
+            </div>
+
+
+            <div class="card project-card">
+
+                <h3>Identity & Microsoft 365 Support</h3>
+
+                <p>
+                    Supported user identity, authentication and productivity
+                    services involving Active Directory, Okta, Microsoft Entra ID
+                    and Microsoft 365 environments.
+                </p>
+
+            </div>
+
+
+            <div class="card project-card">
+
+                <h3>Enterprise Application Support</h3>
+
+                <p>
+                    Provided troubleshooting and technical support for enterprise
+                    applications, Windows services, desktop applications,
+                    Citrix environments and end-user computing issues.
+                </p>
+
+            </div>
+
+
+            <div class="card project-card">
+
+                <h3>Network & Endpoint Troubleshooting</h3>
+
+                <p>
+                    Investigated endpoint connectivity and application issues
+                    using IP configuration, DNS, DHCP, VPN, Wireshark, HAR logs
+                    and Windows troubleshooting tools.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- IT LABS -->
+
+<section>
+
+    <div class="container">
+
+        <h2 class="section-title">
+            IT <span>Labs & Continuous Learning</span>
+        </h2>
+
+        <div class="section-line"></div>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Windows Administration Lab</h3>
+                <p>
+                    Windows administration, troubleshooting, services,
+                    event logs, networking and system diagnostics.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Active Directory Lab</h3>
+                <p>
+                    User management, computer management, OU structure,
+                    Group Policy and domain administration concepts.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>PowerShell & Automation</h3>
+                <p>
+                    PowerShell fundamentals, Windows administration,
+                    system diagnostics and IT troubleshooting automation.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Linux Administration</h3>
+                <p>
+                    Linux fundamentals, system administration,
+                    networking, services and Bash command-line operations.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Modern Endpoint Management</h3>
+                <p>
+                    Learning Intune, SCCM/MECM, Windows Autopilot,
+                    endpoint compliance and modern Windows management.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Endpoint Security</h3>
+                <p>
+                    Learning modern endpoint security concepts including
+                    Defender for Endpoint, device compliance and Zero Trust.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- EDUCATION -->
+
+<section id="education">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            <span>Education</span>
+        </h2>
+
+        <div class="section-line"></div>
+
+        <div class="education-item">
+
+            <h3>Bachelor of Computer Applications (BCA)</h3>
+
+            <p>
+                Tamil Nadu Open University — Distance Education
+            </p>
+
+            <p>
+                Currently Pursuing
+            </p>
+
+        </div>
+
+
+        <div class="education-item">
+
+            <h3>Diploma in Mechanical Engineering</h3>
+
+            <p>
+                Rudhraveni Muthuswami Polytechnic College
+            </p>
+
+            <p>
+                2015 – 2018 | 80%
+            </p>
+
+        </div>
+
+
+        <div class="education-item">
+
+            <h3>SSLC</h3>
+
+            <p>
+                JSR Higher Secondary School
+            </p>
+
+            <p>
+                2014 – 2015 | 81%
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CERTIFICATIONS -->
+
+<section>
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Certifications & <span>Recognition</span>
+        </h2>
+
+        <div class="section-line"></div>
+
+        <div class="card">
+
+            <p>
+                Professional certifications and recognition details
+                will be added as completed and verified.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Contact <span>Me</span>
+        </h2>
+
+        <div class="section-line"></div>
+
+        <div class="contact-box">
+
+            <p>
+                <strong>Name:</strong> Muthu Shivaraman
+            </p>
+
+            <p>
+                <strong>Email:</strong>
+                muthushivaraman22@gmail.com
+            </p>
+
+            <p>
+                <strong>Phone:</strong>
+                +91 6382462720
+            </p>
+
+            <p>
+                <strong>Location:</strong>
+                Bangalore, India
+            </p>
+
+            <p>
+                <strong>LinkedIn:</strong>
+                <a href="https://www.linkedin.com/"
+                   target="_blank">
+                    LinkedIn Profile
+                </a>
+            </p>
+
+            <p>
+                <strong>GitHub:</strong>
+                <a href="https://github.com/muthusivaraman22-dot"
+                   target="_blank">
+                    github.com/muthusivaraman22-dot
+                </a>
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="container">
+
+        © 2026 Muthu Shivaraman. All Rights Reserved.
+
+    </div>
+
+</footer>
+
+</body>
+</html>
